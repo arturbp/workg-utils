@@ -1,0 +1,29 @@
+{
+  "name": "workg-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "files": ["lib/**/*"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturbp/workg-utils.git"
+  },
+  "keywords": [
+    "Workg",
+    "Work Group",
+    "Work Inteligencia"
+  ],
+  "author": "Artur Pinheiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturbp/workg-utils/issues"
+  },
+  "homepage": "https://github.com/arturbp/workg-utils#readme",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  }
+}
