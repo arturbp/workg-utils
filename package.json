@@ -1,6 +1,6 @@
 {
   "name": "workg-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/index.js",
   "types": "lib",
@@ -18,7 +18,7 @@
     "Work Inteligencia"
   ],
   "author": "Artur Pinheiro",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/arturbp/workg-utils/issues"
   },
