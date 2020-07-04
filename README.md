@@ -1,19 +1,21 @@
 # Workg Utils
 
-Utilize essa módulo para fazer validações e/ou formatar valores.
+Utilize esse módulo para fazer validações e/ou formatar valores.
 
 Visualize o módulo no site [NPM](https://www.npmjs.com/package/workg-utils)
 
 ## Instalação
 ```sh
 yarn add workg-utils
-````
+```
 ou
 ```sh
 npm i workg-utils
-````
+```
 
 ## Uso
+
+##### Validation
 ```jsx
 import React from 'react';
 import { useValidation } from 'workg-utils';
@@ -22,7 +24,25 @@ function App() {
   const validation = useValidation();
   return (
     <div className="App">
-      <span>{validation.validateCnpj("89885145000129") ? "TRUE" : "FALSE"}</span>
+      <p>{validation.validateCnpj("89885145000129") ? "TRUE" : "FALSE"}</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+##### Normalize
+```jsx
+import React from 'react';
+import { useNormalize } from 'workg-utils';
+
+function App() {
+  const normalize = useNormalize();
+  return (
+    <div className="App">
+      <p>{normalize.onlyNumbers("new123package456")}</p>
+      <p>{normalize.onlyLetters("new123package456")}</p>
     </div>
   );
 }
@@ -32,18 +52,18 @@ export default App;
 
 ## O que temos
 
-##### Validation
-* validateCpf
-* validateCnpj
-* validadeEmail
+##### useValidation
+- validateCpf
+- validateCnpj
+- validadeEmail
 
-##### Normalize
-* onlyNumbers
-* onlyLetters
-* phoneMask
-* cepMask
-* cnpjMask
-* cpfMask
+##### useNormalize
+- onlyNumbers
+- onlyLetters
+- phoneMask
+- cepMask
+- cnpjMask
+- cpfMask
 
 ## Como contribuir
 
