@@ -1,13 +1,15 @@
 {
   "name": "workg-utils",
-  "version": "1.0.2",
+  "version": "1.0.10",
   "description": "",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
     "build": "tsc -p ."
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arturbp/workg-utils.git"
