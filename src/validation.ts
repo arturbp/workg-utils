@@ -8,6 +8,9 @@
 
 export function validateCpf(cpf: string) {
   if (cpf === '') return false;
+
+  cpf = cpf.replace(/\D/g, ''); //OnlyNumbers
+
   // Elimina CPFs invalidos conhecidos	
   if (cpf.length !== 11 ||
     cpf === "00000000000" ||
@@ -45,6 +48,8 @@ export function validateCpf(cpf: string) {
 export function validateCnpj(cnpj: string) {
   if (cnpj === '') return false;
 
+  cnpj = cnpj.replace(/\D/g, ''); //OnlyNumbers
+
   if (cnpj.length !== 14)
     return false;
 
@@ -62,7 +67,7 @@ export function validateCnpj(cnpj: string) {
     return false;
 
   // Valida DVs
-  var tamanho = cnpj.length - 2
+  var tamanho = cnpj.length - 2;
   var numeros = cnpj.substring(0, tamanho);
   var digitos = cnpj.substring(tamanho);
   var soma = 0;
@@ -71,8 +76,8 @@ export function validateCnpj(cnpj: string) {
     soma += Number(numeros.charAt(tamanho - i)) * pos--;
     if (pos < 2)
       pos = 9;
-  }
-  var resultado
+  };
+  var resultado;
   resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
   if (String(resultado) !== digitos.charAt(0))
     return false;
@@ -85,7 +90,7 @@ export function validateCnpj(cnpj: string) {
     soma += Number(numeros.charAt(tamanho - i)) * pos--;
     if (pos < 2)
       pos = 9;
-  }
+  };
 
   resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
   if (String(resultado) !== digitos.charAt(1))
@@ -96,7 +101,7 @@ export function validateCnpj(cnpj: string) {
 
 export function validadeEmail(value: string) {
   if (!value.match(/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-      return false
-  }
-  return true
+      return false;
+  };
+  return true;
 }
